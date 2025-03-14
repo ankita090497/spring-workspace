@@ -10,13 +10,9 @@ public interface UserService {
     //create
     User saveUser(User user);
 
-    // getALL
-  //  List<User> getAllUser();
-
     User getUser(Long userId);
 
     void deleteUser(Long userID);
-
 
     User updateUser(User user, Long userId);
 }
