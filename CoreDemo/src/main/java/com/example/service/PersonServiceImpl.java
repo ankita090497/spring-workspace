@@ -13,13 +13,13 @@ public class PersonServiceImpl implements PersonService{
     PersonRepository personRepository;
 
     @Override
-    public PersonInfo savePersonInfo(PersonInfo personInfo) {
+    public PersonInfo savePerson(PersonInfo personInfo) {
         PersonInfo savedPerson = personRepository.save(personInfo);
         return savedPerson;
     }
 
     @Override
-    public PersonInfo fetchPersonInfo(Long personId) {
+    public PersonInfo fetchPerson(Long personId) {
         PersonInfo personInfo = personRepository.findById(personId).orElseThrow(() -> new ResourceNotFoundException("Person Info not found with given personId : " + personId));
         return personInfo;
     }

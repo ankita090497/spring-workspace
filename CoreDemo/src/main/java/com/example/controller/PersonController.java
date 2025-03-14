@@ -16,13 +16,13 @@ public class PersonController {
 
     @PostMapping("/add")
     public ResponseEntity<PersonInfo> createPerson(@RequestBody PersonInfo personInfo){
-        PersonInfo createdPerson =  personService.savePersonInfo(personInfo);
+        PersonInfo createdPerson =  personService.savePerson(personInfo);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdPerson);
     }
 
     @GetMapping("/fetch/{personId}")
     public ResponseEntity<PersonInfo> getPerson(@PathVariable Long personId){
-        PersonInfo personInfo =  personService.fetchPersonInfo(personId);
+        PersonInfo personInfo =  personService.fetchPerson(personId);
         return ResponseEntity.ok(personInfo);
     }
 

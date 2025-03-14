@@ -4,9 +4,9 @@ import com.example.entity.PersonInfo;
 
 public interface PersonService {
 
-    PersonInfo savePersonInfo(PersonInfo personInfo);
+    PersonInfo savePerson(PersonInfo personInfo);
 
-    PersonInfo fetchPersonInfo(Long personId);
+    PersonInfo fetchPerson(Long personId);
 
     void deletePerson(Long personId);
 
