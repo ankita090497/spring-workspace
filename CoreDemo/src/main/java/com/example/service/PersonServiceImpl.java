@@ -37,7 +37,6 @@ public class PersonServiceImpl implements PersonService{
             fetchPerson.setCity(personInfo.getCity());
         }
 
-
         PersonInfo updatedPerson = personRepository.save(fetchPerson);
         return updatedPerson;
     }
