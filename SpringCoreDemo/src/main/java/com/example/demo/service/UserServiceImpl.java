@@ -18,13 +18,6 @@ public class UserServiceImpl implements UserService {
         User savedUser = userRepository.save(user);
         return savedUser;
     }
-
-   /* @Override
-    public List<User> getAllUser() {
-        List<User> allUser = userRepository.findAll();
-        return allUser;
-    }*/
-
     @Override
     public User getUser(Long userId) {
         User getUser = userRepository.findById(userId).orElseThrow(() -> new ResourceNotFoundException("User not found with given userID : " + userId));
